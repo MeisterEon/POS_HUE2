@@ -25,7 +25,8 @@ public class NumberTester {
 
     public void testFile() {
         try (Scanner scanner = new Scanner(new File(fileName))){
-            for (int i = 0; i < Integer.parseInt(scanner.nextLine()); i++) {
+            int limit = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < limit; i++) {
                 String[] split = scanner.nextLine().split(" ");
                 switch (Integer.parseInt(split[0])) {
                     case 1 -> System.out.println(oddTester.testNumber(Integer.parseInt(split[1])) ? "ODD" : "EVEN");

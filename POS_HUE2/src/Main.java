@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         NumberTester numberTester = new NumberTester("test_csv");
         numberTester.setOddEvenTester(number -> !(number % 2 == 0));
-        numberTester.setPrimeTester(number -> new EratosthenesPrimeSieve(0).isPrime(number));
+        numberTester.setPrimeTester(number -> new EratosthenesPrimeSieve(10000000).isPrime(number));
         numberTester.setPalindromeTester(Main::checkPalindrome);
 
         numberTester.testFile();
