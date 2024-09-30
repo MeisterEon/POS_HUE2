@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class NumberTester {
     private String fileName;
     private NumberTest oddTester;
@@ -20,6 +24,18 @@ public class NumberTester {
     }
 
     public void testFile() {
-        //TODO
+        try (Scanner scanner = new Scanner(new File(fileName))){
+            for (int i = 0; i < Integer.parseInt(scanner.nextLine()); i++) {
+                String[] split = scanner.nextLine().split(" ");
+                switch (Integer.parseInt(split[0])) {
+                    case 1 -> System.out.println(oddTester.testNumber(Integer.parseInt(split[1])));
+                    case 2 -> System.out.println(primeTester.testNumber(Integer.parseInt(split[1])));
+                    case 3 -> System.out.println(palindromeTester.testNumber(Integer.parseInt(split[1])));
+                    default -> System.out.println("Invalid Number");
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
     }
 }
