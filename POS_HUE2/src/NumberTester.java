@@ -28,9 +28,9 @@ public class NumberTester {
             for (int i = 0; i < Integer.parseInt(scanner.nextLine()); i++) {
                 String[] split = scanner.nextLine().split(" ");
                 switch (Integer.parseInt(split[0])) {
-                    case 1 -> System.out.println(oddTester.testNumber(Integer.parseInt(split[1])));
-                    case 2 -> System.out.println(primeTester.testNumber(Integer.parseInt(split[1])));
-                    case 3 -> System.out.println(palindromeTester.testNumber(Integer.parseInt(split[1])));
+                    case 1 -> System.out.println(oddTester.testNumber(Integer.parseInt(split[1])) ? "ODD" : "EVEN");
+                    case 2 -> System.out.println(primeTester.testNumber(Integer.parseInt(split[1])) ? "PRIME" : "NO PRIME");
+                    case 3 -> System.out.println(palindromeTester.testNumber(Integer.parseInt(split[1])) ? "PALINDROM" : "NO PALINDROM");
                     default -> System.out.println("Invalid Number");
                 }
             }
