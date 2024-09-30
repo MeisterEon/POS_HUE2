@@ -1,4 +1,8 @@
 public class NumberTester {
+    private String fileName;
+    private NumberTest oddTester;
+    private NumberTest primeTester;
+    private NumberTest palindromeTester;
     public NumberTester(String fileName) {
         //TODO
     }
