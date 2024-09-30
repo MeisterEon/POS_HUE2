@@ -4,7 +4,7 @@ public class NumberTester {
     private NumberTest primeTester;
     private NumberTest palindromeTester;
     public NumberTester(String fileName) {
-        //TODO
+        this.fileName = fileName;
     }
 
     public void setOddEvenTester(NumberTest oddTester) {
